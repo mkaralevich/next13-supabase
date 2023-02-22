@@ -20,8 +20,8 @@ export default function Header() {
 	return (
 		<header>
 			<div>
-				<button onClick={handleLogout}>Logout</button>
-				<button onClick={handleLoginWithGithub}>Log in</button>
+				{session && <button onClick={handleLogout}>Logout</button>}
+				{!session && <button onClick={handleLoginWithGithub}>Log in</button>}
 				<div>{session && session.user.email}</div>
 			</div>
 		</header>

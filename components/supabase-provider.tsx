@@ -24,7 +24,7 @@ export default function SupabaseProvider({
 }) {
 	const [supabase] = useState(() => supabaseBrowser);
 
-	console.log("session from provider:", session?.access_token);
+	console.log("provider:", session?.user);
 
 	return (
 		<Context.Provider value={{ supabase, session }}>

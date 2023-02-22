@@ -4,6 +4,7 @@ import Header from "../components/header";
 import SupabaseListener from "../components/supabase-listener";
 import SupabaseProvider from "../components/supabase-provider";
 import supabaseServer from "../utils/supabase-server";
+import Providers from "./providers";
 
 // do not cache this layout
 export const revalidate = 0;
@@ -23,11 +24,10 @@ export default async function RootLayout({
 		<html lang="en">
 			<head />
 			<body>
-				<SupabaseProvider session={session}>
-					<SupabaseListener serverAccessToken={session?.access_token} />
+				<Providers supabaseSession={session}>
 					<Header />
 					{children}
-				</SupabaseProvider>
+				</Providers>
 			</body>
 		</html>
 	);
