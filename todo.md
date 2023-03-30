@@ -1,5 +1,5 @@
 - [x] add github auth
 - [x] add redirect from/to login
-- [ ] add local supabase via cli
+- [ ] add local supabase via cli (skip for now)
 - [ ] add jotai
 - [ ] add react query
